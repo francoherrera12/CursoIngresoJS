@@ -20,7 +20,7 @@ function Circulo ()
     let perimetro;
     let radio;
     let alambre;
-    const PI= 3.14;
+    const PI= 3.14; //LAS CONSTANTES DEBEN DECLARARSE EN MAYUSCULA Y ASIGNARSE EN LA MISMA LINEA.
         radio=parseFloat(document.getElementById("txtIdRadio").value);
         perimetro= 2* PI*radio;
         alambre= perimetro*3
