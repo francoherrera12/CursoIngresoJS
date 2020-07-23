@@ -21,6 +21,12 @@ function comenzar()
 
 function verificar()
 {
-	
-	
+   let numero;
+   if(flag==0){
+     alert("Primero debes presionar el botón comenzar.")
+   }
+    else{}
+      contadorIntentos=contadorIntentos + 1;
+      document.getElementById("txtIdIntentos").value=contadorIntentos;
+    numero= parseInt(document.getElementById("txtIdNumero"))
 }
