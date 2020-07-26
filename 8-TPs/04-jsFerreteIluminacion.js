@@ -13,17 +13,63 @@ function CalcularPrecio ()
    let  cantidad;
    let  marca;
    let  descuento;
-   let  preciodescuento
+   let  precioDescuento
    let  importeFinal;
    let  iibb;
         cantidad=parseInt(document.getElementById("txtIdCantidad").value);
-        marca=parseInt(document.getElementById("Marca").value); 
+        marca=document.getElementById("Marca").value; 
         
+      switch (cantidad) {
+                  case 1:
+                  case 2:
+                  descuento=0
+                  break;
+                 
+                  case 3:
+                     if( marca=="ArgentinaLuz") {
+                        descuento= 15
+                         
+                     }else if(marca == "FelipeLamparas"){
+                        descuento=10;
+                        
+                     }else{
+                        descuento=5;
+                     
+                     } break;
+                     case 4:  
+                     if( marca=="ArgentinaLuz" || marca=="FelipeLamparas" ) {
+                        descuento=25
+                     
+                     }else{
+                        descuento=20
+                     }
+                     break;
+                     
+                     case 5 :
+                           if(marca=="ArgentinaLuz" ) {
+                           descuento=40
+                     }else{
+                              descuento=30;
+                           }
+                     break;
+                     
+                  default:
+                        descuento=50
+                   
+                  } 
+                     precioDescuento= PRECIO - PRECIO *descuento/100;
+                     
+                     document.getElementById("txtIdprecioDescuento").value= precioDescuento; 
+                     
+                     importeFinal=precioDescuento*cantidad;
+                     
+                     if(importeFinal>=120){
+                        iibb=(importeFinal*10/100);
+                        importeFinal+=iibb
+                        alert("TOTAL = " + "$" + importeFinal + "  Usted pago " + "$" + iibb + " de ingresos brutos.")
+                  }else{
+                     alert( "Total" + "$ " + importeFinal );
+                  }
+               } 
+                     
 
-    if(cantidad>=6 ){
-       descuento=(precio*cantidad/2)
-    
-       document.getElementById("txtIdprecioDescuento").value=preciodescuento;   
-    }
-    
-}

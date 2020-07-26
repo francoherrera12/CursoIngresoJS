@@ -5,10 +5,10 @@ function mostrar()
 	
 		nota= Math.round(Math.random()* (maximo - minimo) + minimo)
 		
-	if(numero>=9){
-		alert("Excelente , nota = " + nota);
-}else if(numero<4){
-		alert("Vamos, la próxima se puede! , nota =  " + nota);
+	if(nota>=9){
+		alert("Excelente , nota  " + nota);
+}else if(nota<4){
+		alert("Vamos, la próxima se puede! , nota  " + nota);
 }else{
 	   alert("Aprobado , nota  " + nota);
 }}
