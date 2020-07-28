@@ -1,6 +1,22 @@
 function mostrar()
-{
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+{	
+	let destino =document.getElementById("txtIdDestino").value;
+	/*switch(destino){
+				case "Bariloche" :
+				case "Usuahia":
+					alert("Hace frio.");
+					break;
+				case "Mar del plata":
+				case "Cataratas":
+					alert("Hace Calor.")		
+					break;	*/
 
-}//FIN DE LA FUNCIÓN
+				if (destino=="Bariloche" || destino == "Ushuaia"){
+							alert("Hace Frio");
+				}else if (destino=="Cataratas" || destino == "Mar del plata"){
+							alert("Hace Calor")
+				}else	{
+					alert ( "No es un destino válido.")
+				}
+	
+				}
