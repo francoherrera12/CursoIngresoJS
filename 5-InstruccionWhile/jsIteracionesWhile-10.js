@@ -11,9 +11,7 @@ hasta que el usuario quiera, mostrar:
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
-{
-	//declarar contadores y variables 
-	var respuesta;
+{	let respuesta;
 	var numeroIngresado;
 	var sumaNegativos=0;
 

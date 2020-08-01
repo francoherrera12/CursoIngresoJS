@@ -41,10 +41,11 @@ else{
      
        numero= parseInt(document.getElementById("txtIdNumero")).value;
     
-      if(numeroSecreto ==numero){
+      if(numeroSecreto ==numero &&  flag==1){
       
+
         alert(`Usted es un ganador!! y en solo ${contadorIntentos} intentos`);
-        flag = 0;
+        
     
       } else if(numeroSecreto < numero) {
       alert("Falta...");
