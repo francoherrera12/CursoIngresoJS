@@ -41,7 +41,7 @@ else{
      
        numero= parseInt(document.getElementById("txtIdNumero")).value;
     
-      if(numeroSecreto ==numero &&  flag==1){
+      if(numeroSecreto==numero &&  flag==1){
       
 
         alert(`Usted es un ganador!! y en solo ${contadorIntentos} intentos`);
@@ -55,6 +55,9 @@ else{
  
      
     }
-    document.getElementById("txtIdNumero").focus(); 
+
+   
+    }
+    document.getElementById("txtIdNumero").focus()=numero; 
   }
-  }
+  

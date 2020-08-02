@@ -2,43 +2,29 @@
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
-{	let positivos=0;
-	let negativos=1;
-	let numero;
-	let flag=0;
-	let respuesta;
+{	let numero;
+	let positivo=0;
+	let contadorPosi=0;
+	let negativo=1;
+	let contadorNegat=0;
+	let respuesta="si"
 	
-	
-	
-	do{ 
-		//pedir los numeros
-		numero=parseInt(prompt("Ingrese un numero"));
+	do{	numero=parseInt(prompt("Ingrese un número"));
 		
-		if(numero>=0){ //analizar el signo del numero con la condicion
+	if(numero>0){
+		positivo+=numero;
+		contadorPosi++;
 		
-				positivos+=numero; /*ES IGUAL A positivos=positivos+numero;*/
+	}else{
+		negativo*=numero;
+		contadorNegat++;
+		}
 	
-		}else{
-			flag=1;		
-		/*negativos*=numero; ES IGUAL A*/ negativos=negativos*numero;
-		
-					}
-			
-		respuesta=prompt("¿Desea ingresar otro número?")
-
-
-
-	}while(respuesta=='s');
-    
-	if(flag==0){
-		negativos=0;
-	}
+		respuesta=prompt("Desea seguir ingresando numeros?")
 	
-
-	//resultados---> fuera del bucle 
+	}while(respuesta !="no")
 	
-	document.getElementById("txtIdSuma").value=positivos;
-	
-	document.getElementById("txtIdProducto").value=negativos;
+	document.getElementById("txtIdSuma").value=positivo;
+	document.getElementById("txtIdProducto").value=negativo;
 
 }//FIN DE LA FUNCIÓN

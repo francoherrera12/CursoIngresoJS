@@ -1,12 +1,18 @@
-/*
-Al presionar el botón pedir un sexo
-'f' para femenino, 'm' para masculino.*/
+
 function mostrar()
-{
-	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
+{	let sexo;
+	let contador=0;
+	
+	sexo=prompt("Ingrese un sexo f o m.");
 
-
-
-	txtIdSexo.value=sexoIngresado;
+	while(!(sexo=='f' || sexo=='m')) { 	
+	
+		sexo=prompt("Ingrese un sexo valido.")
+	
+		contador++;
+	
+}
+	
+	document.getElementById("txtIdSexo").value=sexo;
+	
 }//FIN DE LA FUNCIÓN

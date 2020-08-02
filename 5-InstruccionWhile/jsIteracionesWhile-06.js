@@ -3,13 +3,11 @@ function mostrar()
 	let acumulador=0;
 	let promedio;
 	let i=0;
-	let respuesta="si"
 	
-	while(respuesta !="no"){
+	while(i<5){
 		numero=parseInt(prompt("Ingrese un número"));
 		acumulador+=numero;
 		i++;
-		respuesta=prompt("Desea seguir sumando?")
 	}
 	promedio=parseInt(acumulador/i);
 

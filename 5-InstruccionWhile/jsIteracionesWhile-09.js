@@ -7,7 +7,7 @@ function mostrar()
 	let maximo;
 	let minimo;
 	let	flag=0;
-	let seguir;
+	let seguir="si"
 	
 	do{ 
 		//pedir los numeros
@@ -21,7 +21,7 @@ function mostrar()
 			flag=1;
 		}
 		seguir=prompt("Quiere ingresar otro numero?");
-		}	while(seguir=='s');
+		}	while(seguir!="no");
 		document.getElementById("txtIdMaximo").value=maximo;
 		document.getElementById("txtIdMinimo").value=minimo;
 
