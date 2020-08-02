@@ -18,7 +18,7 @@ function comenzar()
 	 numeroSecreto = Math.round(Math.random() * 99 +  1);
     alert (numeroSecreto );
     // Focus= Función que da foco, cursor titilando.
-    document.getElementById("txtIdNumero").focus();
+   parseInt(document.getElementById("txtIdNumero").focus());
     //contador de intentos inicializado en 0
     contadorIntentos=0;
     document.getElementById("txtIdIntentos").value=contadorIntentos;
@@ -30,18 +30,18 @@ function verificar(){
    let numero;
     
    if(flag == 0) {
-     
+      
     alert("Primero debes presionar el botón comenzar.")
    
   }
-else{
+else{   
         contadorIntentos++;
       
         document.getElementById("txtIdIntentos").value=contadorIntentos;
-     
-       numero= parseInt(document.getElementById("txtIdNumero")).value;
-    
-      if(numeroSecreto==numero &&  flag==1){
+        parseInt(document.getElementById("txtIdNumero").value)=numero;  
+        alert(numero);
+
+      if(numeroSecreto==numero){
       
 
         alert(`Usted es un ganador!! y en solo ${contadorIntentos} intentos`);
