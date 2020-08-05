@@ -18,7 +18,7 @@ function comenzar()
 	 numeroSecreto = Math.round(Math.random() * 99 +  1);
     alert (numeroSecreto );
     // Focus= Función que da foco, cursor titilando.
-   parseInt(document.getElementById("txtIdNumero").focus());
+   document.getElementById("txtIdNumero").focus();
     //contador de intentos inicializado en 0
     contadorIntentos=0;
     document.getElementById("txtIdIntentos").value=contadorIntentos;
@@ -31,14 +31,14 @@ function verificar(){
     
    if(flag == 0) {
       
-    alert("Primero debes presionar el botón comenzar.")
+    alert("Primero debes presionar el botón comenzar.");
    
   }
 else{   
         contadorIntentos++;
       
         document.getElementById("txtIdIntentos").value=contadorIntentos;
-        parseInt(document.getElementById("txtIdNumero").value)=numero;  
+        numero=document.getElementById("txtIdNumero").value;  
         alert(numero);
 
       if(numeroSecreto==numero){
@@ -58,6 +58,6 @@ else{
 
    
     }
-    document.getElementById("txtIdNumero").focus()=numero; 
+    document.getElementById("txtIdNumero").value=numero; 
   }
   

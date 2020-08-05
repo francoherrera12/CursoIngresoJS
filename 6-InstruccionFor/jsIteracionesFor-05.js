@@ -1,7 +1,13 @@
 function mostrar()
-{
-	alert("ok");
+{let numero;
+	
 
-
-
-}//FIN DE LA FUNCIÓN
+	for( ; ; ){
+		numero=parseInt(prompt("Ingrese otro numero"));
+		
+		if(numero == 9 ){
+		
+			break;
+		}
+		alert ("Usted ingreso el numero " + numero)
+}}
