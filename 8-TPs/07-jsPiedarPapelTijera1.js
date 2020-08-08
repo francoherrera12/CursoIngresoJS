@@ -4,12 +4,14 @@ siendo 1 para “piedra”, el 2 para “papel” y 3 para “tijera”.
 El jugador seleccionará una imagen correspondiente 
 a su opción  y le informaremos si ganó, empató o perdió.
 */
-var eleccionMaquina;
+let eleccion;
 
 function comenzar()
-{
-	
+{numeroPc=Math.round(Math.random() * 3 +  1);
 
+if(flag=0){
+    alert("Primero debe seleccionar un numero")
+}
 
 }//FIN DE LA FUNCIÓN
 function piedra()

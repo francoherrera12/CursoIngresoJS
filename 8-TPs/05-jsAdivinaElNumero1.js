@@ -16,7 +16,7 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 numeroSecreto = Math.round(Math.random() * 99 +  1);
-    alert (numeroSecreto );
+ 
     // Focus= Función que da foco, cursor titilando.
    document.getElementById("txtIdNumero").focus();
     //contador de intentos inicializado en 0
@@ -39,7 +39,7 @@ else{
       
         document.getElementById("txtIdIntentos").value=contadorIntentos;
         numero=document.getElementById("txtIdNumero").value;  
-        alert(numero);
+  
 
       if(numeroSecreto==numero){
       
@@ -47,7 +47,7 @@ else{
         alert(`Usted es un ganador!! y en solo ${contadorIntentos} intentos`);
         
     
-      } else if(numeroSecreto < numero) {
+      } else if(numeroSecreto > numero) {
       alert("Falta...");
   
     } else{

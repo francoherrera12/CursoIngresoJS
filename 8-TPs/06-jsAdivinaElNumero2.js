@@ -40,9 +40,10 @@ else{
       
         document.getElementById("txtIdIntentos").value= contadorIntentos;
      
-       numero= parseInt(document.getElementById("txtIdNumero")).value;
+       numero=parseInt(document.getElementById("txtIdNumero").value);
     
       if(numeroSecreto == numero){
+		
 		switch(contadorIntentos){
 			case 1:
 				alert("Usted es un psiquico");
@@ -73,7 +74,7 @@ else{
         
         flag = 0;
 		alert(`Usted es un ganador!! y en solo ${contadorIntentos} intentos`);
-      } else if(numeroSecreto < numero) {
+      } else if(numeroSecreto > numero) {
       alert("Falta...");
   
     } else{
@@ -81,6 +82,6 @@ else{
  
      
     }
-    document.getElementById("txtIdNumero").focus(); 
+    document.getElementById("txtIdNumero").value=numero;
   }
   }
